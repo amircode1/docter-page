@@ -1,9 +1,9 @@
 "use client"
-import speed from "../assets/speed.svg"
 import { useState } from "react"
 import { Info, Plus, Minus } from "lucide-react"
 import arrow from "../assets/arrow.svg"
 import SkillLevelBar from "./SkillLevelBar"
+import SpeedIcon from "./SpeedIcon"
 
 function DoctorExpertise() {
   const [openItem, setOpenItem] = useState("جراحی قلب اطفال")
@@ -18,7 +18,7 @@ function DoctorExpertise() {
     {
       id: "پیوند قلب",
       title: "پیوند قلب",
-      level: "خیلی زیاد",
+      level: "متوسط",
       description: "توضیحات مربوط به پیوند قلب",
     },
     {
@@ -72,11 +72,10 @@ function DoctorExpertise() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-[#2196F3]">{item.level}</span>
-                    <img src={speed} alt="speed" className="w-8 h-8" />
+                    <SpeedIcon level={item.level} />
                   </div>
                 </div>
               </button>
-
               <div
                 className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${
                   openItem === item.id ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
@@ -96,7 +95,6 @@ function DoctorExpertise() {
                 </div>
               </div>
             </div>
-
           ))}
         </div>
 

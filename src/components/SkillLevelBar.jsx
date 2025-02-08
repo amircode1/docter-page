@@ -4,54 +4,48 @@ function SkillLevelBar({ level = "خیلی زیاد" }) {
     { name: "متوسط", percentage: 50 },
     { name: "زیاد", percentage: 15 },
     { name: "خیلی زیاد", percentage: 15 },
-  ];
-
-  // پیدا کردن سطح فعلی
-  const currentLevel = levels.find((l) => l.name === level);
+  ]
 
   return (
-    <div className="w-full space-y-2">
-      <div className="h-4 rounded-full overflow-hidden flex bg-[#454384] gap-px">
+    <div className="w-full space-y-2 rounded-full">
+      {/* نوار اصلی با فاصله بین بخش‌ها */}
+      <div className="h-4 flex gap-1 bg-[#38356a]">
         {levels.map((levelData) => (
           <div
             key={levelData.name}
-            className={`h-full relative transition-all duration-300 ${
-              levelData.name === level ? 'bg-[#2196F3]' : 'bg-transparent'
-            }`}
-
+            className="h-full relative transition-all duration-300"
             style={{
-              width: `calc(${levelData.percentage}%)`,
+              width: `${levelData.percentage}%`,
+              backgroundColor: levelData.name === level ? "#2196F3" : "#454384",
+              borderRadius: 
+                levelData.name === "کم" ? "0px 8px 8px 0px" :
+                levelData.name === "خیلی زیاد" ? "8px 0px 0px 8px" : "0"
             }}
           >
-            {/* خط جداکننده سمت راست */}
+            {/* خط جداکننده سفید */}
             {levelData.name !== "خیلی زیاد" && (
-              <div 
-                className={`absolute right-0 top-0 w-px h-full ${
-                  levelData.name === level || 
-                  levels[levels.findIndex(l => l.name === levelData.name) + 1]?.name === level 
-                    ? 'bg-[#2196F3]' 
-                    : 'bg-[#1E1B38]'
-                }`}
-              />
+              <div className="absolute right-[-2px] top-0 w-[2px] h-full"></div>
             )}
           </div>
         ))}
       </div>
-      
-      {/* برچسب‌های سطح */}
-      <div className="flex justify-between text-sm">
+
+      {/* لیبل‌ها با فاصله متناسب */}
+      <div className="flex justify-between text-sm gap-1">
         {levels.map((l) => (
           <div 
             key={l.name} 
-            style={{ width: `${l.percentage}%` }} 
-            className={`text-center ${l.name === level ? "text-[#2196F3]" : "text-gray-400"}`}
+            className={`text-center ${
+              l.name === level ? "text-[#2196F3] font-bold" : "text-gray-400"
+            }`}
+            style={{ width: `${l.percentage}%` }}
           >
             {l.name}
           </div>
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default SkillLevelBar;

@@ -62,7 +62,7 @@ function LocationCard() {
               />
               <Marker position={position} icon={customIcon} />
             </MapContainer>
-            <style jsx="true" global>{`
+            <style jsx="true" data-global="true">{`
               .leaflet-control-attribution {
                 display: none;
               }

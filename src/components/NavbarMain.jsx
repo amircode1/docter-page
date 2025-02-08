@@ -1,5 +1,5 @@
 import React from "react";
-import HelifaNavbar from "../../public/helifaNavbar.svg"
+import HelifaLogo from '/helifaNavbar.svg?url';
 import SearchIcon from "../assets/search.svg"
 import VectorIcon from "../assets/Vector.svg"
 
@@ -19,7 +19,7 @@ function Navbar() {
             <div className="flex items-center">
                 <p className="text-gray-300 text-xs">رسانه ای سلامتی و زیبایی</p>
                 <h1 className="text-white text-xs font-bold">هیلیفا</h1>
-                <img src={HelifaNavbar} alt="HelifaNavbar" />
+                <img src={HelifaLogo} alt="HelifaNavbar" />
             </div>
         </div>
 
