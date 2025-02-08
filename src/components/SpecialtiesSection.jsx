@@ -22,7 +22,7 @@ export default function SpecialtiesSection() {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto" dir="rtl">
+    <div className="" dir="rtl">
       <div className="bg-card-bg rounded-3xl overflow-hidden">
         <div className="divide-y divide-background-hover">
           {specialties.slice(0, isExpanded ? specialties.length : 2).map((specialty, index) => (

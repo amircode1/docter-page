@@ -42,7 +42,7 @@ function Doctor() {
                     <aside className="lg:w-1/3">
                         <DoctorProfile />
                     </aside>
-                    <div className="lg:w-2/3 space-y-6 bg-background p-6">
+                    <div className="lg:w-2/3 space-y-6 bg-background p-10">
                         <NavbarChain/>
                         <NavbarPage/>
                         <h3 className="text-lg font-bold mb-2 flex flex-row-reverse text-text-primary">درباره دکتر رضا فرجی</h3>

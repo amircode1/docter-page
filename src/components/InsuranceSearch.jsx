@@ -13,7 +13,7 @@ export default function InsuranceSearch() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto" dir="rtl">
+    <div className="" dir="rtl">
       <div className="bg-card-bg rounded-3xl p-6">
         <h2 className="text-text-primary text-lg mb-4">
           بیمه مورد نظر خود را جستجو کنید

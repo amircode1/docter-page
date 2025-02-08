@@ -40,7 +40,7 @@ function DoctorExpertise() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto" dir="rtl">
+    <div className="" dir="rtl">
       <div className="bg-card-bg rounded-3xl p-6 text-text-primary">
         <div className="flex items-center justify-between gap-2 mb-6">
           <div className="flex items-center gap-2 px-10">

@@ -21,7 +21,7 @@ function LocationCard() {
   const position = [35.7219, 51.3347]
 
   return (
-    <div className="max-w-4xl mx-auto mb-4" dir="rtl">
+    <div className=" mb-4" dir="rtl">
       <div className="bg-card-bg rounded-3xl p-6 text-text-primary shadow-lg">
         <div className="flex flex-col md:flex-row items-start gap-6">
           <div className="flex-1 space-y-2">

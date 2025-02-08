@@ -22,7 +22,7 @@ function DoctorReviews() {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto" dir="rtl">
+    <div className="" dir="rtl">
       <div className="flex items-center justify-between mb-6 mt-8">
         <h2 className="text-xl font-semibold text-text-primary">
           دیدگاه های دکتر رضا فرجی (۵۳۶)
