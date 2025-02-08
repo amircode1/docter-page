@@ -1,7 +1,7 @@
 import React from "react";
 import HelifaLogo from '/helifaNavbar.svg'
 import SearchIcon from "../assets/search.svg"
-import VectorIcon from "../assets/Vector.svg"
+import VectorIcon from "../assets/vector.svg"
 
 function Navbar() {
     return (
