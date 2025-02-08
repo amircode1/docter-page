@@ -7,12 +7,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@assets': path.resolve(__dirname, './src/assets'),
-      '@fonts': path.resolve(__dirname, './src/fonts')
+      '@': path.resolve(__dirname, './src')
     }
   },
   build: {
-    assetsInclude: ['**/*.eot', '**/*.ttf', '**/*.svg']
+    assetsInclude: ['**/*.eot', '**/*.ttf']
   }
 })
