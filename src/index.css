@@ -48,7 +48,8 @@ html, body, #root {
 
 @font-face {
   font-family: "IRANSans";
-  src: url("./fonts/eot/IRANSansWeb(FaNum)_Medium.eot") format("eot");
+  src: url('@fonts/eot/IRANSansWeb(FaNum)_Medium.eot') format('embedded-opentype'),
+       url('@fonts/ttf/IRANSansWeb(FaNum)_Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

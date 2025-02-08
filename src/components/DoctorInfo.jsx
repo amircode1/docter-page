@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import starsun from "../assets/starsun.svg"
-import calendarcheck from "../assets/calendarcheck.svg"
+import CalendarCheck from '@assets/calendarcheck.svg'
 import history from "../assets/history.svg"
 import thumbsup from "../assets/ThumbsUp.svg"
 import chevronDown from "../assets/ChevronDown.svg"
@@ -25,7 +25,7 @@ const DoctorInfo = () => {
         <StatItem
           title="نوبت موفق"
           value="۵۶۶"
-          icon={calendarcheck}
+          icon={CalendarCheck}
           color="#42A5F5"
         />
 
