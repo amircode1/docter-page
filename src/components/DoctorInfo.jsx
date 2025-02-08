@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import starsun from "../assets/starsun.svg"
-import CalendarCheck from '@assets/calendarcheck.svg'
+import CalendarCheck from '../assets/CalendarCheck.svg'
 import history from "../assets/history.svg"
 import thumbsup from "../assets/ThumbsUp.svg"
 import chevronDown from "../assets/ChevronDown.svg"
