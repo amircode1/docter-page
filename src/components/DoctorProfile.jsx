@@ -13,20 +13,20 @@ import InfoCard from "./InfoCard"
 
 function DoctorProfile() {
   return (
-    <div className="bg-[#16162E] h-full flex justify-center items-start p-6">
-      <div className="text-white rounded-2xl p-6 w-80 text-center">
+    <div className="bg-primary h-full flex justify-center items-start p-6">
+      <div className="text-text-primary rounded-2xl p-6 w-80 text-center">
         {/* Profile Image */}
         <img
           src={DoctorImage}
           alt="Doctor"
-          className="w-24 h-24 rounded-full mx-auto border-2 border-gray-500"
+          className="w-24 h-24 rounded-full mx-auto border-2 border-border"
         />
-        <h2 className="text-xl mt-4 text-white">دکتر رضا فرجی</h2>
-        <p className="text-[#EEEEEE] text-sm mt-2" >متخصص پوست</p>
+        <h2 className="text-xl mt-4 text-text-primary">دکتر رضا فرجی</h2>
+        <p className="text-text-secondary text-sm mt-2">متخصص پوست</p>
         
         {/* Logo */}
-        <div className="bg-[#25254D] p-3 rounded-xl mt-4 flex flex-row items-center justify-center border-dashed border-2 border-gray-500 w-full">
-          <h1 className="bg-gradient-to-r from-[#317AF1] to-[#5CBDF8] text-transparent bg-clip-text text-xl text-center">
+        <div className="bg-secondary p-3 rounded-xl mt-4 flex flex-row items-center justify-center border-dashed border-2 border-border w-full">
+          <h1 className="bg-gradient-to-r from-accent-blue-light to-[#5CBDF8] text-transparent bg-clip-text text-xl text-center">
             هیلیفاید
           </h1>
           <img src={Logo} alt="هیلیفاید" className="w-12 h-12" />
@@ -34,30 +34,32 @@ function DoctorProfile() {
         
         {/* Actions */}
         <div className="flex justify-center gap-4 my-2 mt-6">
-          <button className="bg-[#25254D] p-3 rounded-2xl text-gray-400">
+          <button className="bg-secondary p-3 rounded-2xl text-text-secondary hover:bg-background-hover transition-colors">
             <img src={ShareIcon} alt="Share" className="w-7 h-7" />
           </button>
-          <button className="bg-[#25254D] p-3 rounded-2xl text-gray-400">
+          <button className="bg-secondary p-3 rounded-2xl text-text-secondary hover:bg-background-hover transition-colors">
             <img src={BookmarkIcon} alt="Bookmark" className="w-7 h-7" />
           </button>
-          <button className="bg-[#25254D] p-3 rounded-2xl text-gray-400">
+          <button className="bg-secondary p-3 rounded-2xl text-text-secondary hover:bg-background-hover transition-colors">
             <img src={InstagramIcon} alt="Chat" className="w-7 h-7" />
           </button>
         </div>
         
         {/* Appointment */}
         <div className="flex justify-between">
-          <p className="text-white text-xs mt-4">شنبه ۱۹ آبان ساعت ۱۸:۰۰</p>
-          <p className="text-white text-xs mt-4">:نزدیک‌ترین نوبت خالی</p>
+          <p className="text-text-primary text-xs mt-4">شنبه ۱۹ آبان ساعت ۱۸:۰۰</p>
+          <p className="text-text-primary text-xs mt-4">:نزدیک‌ترین نوبت خالی</p>
         </div>
-        <button className="bg-blue-600 w-full py-4 mt-3 rounded-2xl text-white">رزرو نوبت</button>
+        <button className="bg-accent-blue-light hover:bg-accent-blue-dark w-full py-4 mt-3 rounded-2xl text-text-primary transition-colors">
+          رزرو نوبت
+        </button>
         
         {/* AI Review */}
         <button 
-          className="bg-[#16162E] drop-shadow-[0_0_3px_#97BCF8] w-full py-2 mt-7 rounded-2xl flex items-center justify-center relative overflow-hidden group"
+          className="bg-primary drop-shadow-[0_0_3px_#97BCF8] w-full py-2 mt-7 rounded-2xl flex items-center justify-center relative overflow-hidden group"
           style={{
             border: '2px solid transparent',
-            backgroundImage: 'linear-gradient(#16162E, #16162E), linear-gradient(45deg, #FF862F, #F85A5A, #70B8FB, #A050E5)',
+            backgroundImage: 'linear-gradient(#16162E, #16162E), linear-gradient(45deg, #FF862F, #F85A5A, #70B8FB, #A050E5',
             backgroundOrigin: 'border-box',
             backgroundClip: 'padding-box, border-box',
           }}
@@ -72,29 +74,25 @@ function DoctorProfile() {
         </button>
 
         {/* Info Cards */}
-        <div className="mt-6 space-y-2 ">
-          {/* امتیاز */}
+        <div className="mt-6 space-y-2">
           <InfoCard 
             title="امتیاز"
             value="4.6"
             icon={StarIcon}
             iconBg="rounded-xl"
           />
-          {/* نظام پزشکی */}
           <InfoCard 
             title="نظام پزشکی"
             value="۱۳۵۴۷"
             icon={MedicalIcon}
             iconBg="rounded-xl"
           />
-          {/* دیدگاه */}
           <InfoCard 
             title="دیدگاه"
             value="۱۵۲۴۰"
             icon={CommentIcon}
             iconBg="rounded-xl"
           />
-          {/* پاسخ */}
           <InfoCard 
             title="پاسخ"
             value="۱۵۲۴۰"

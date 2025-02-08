@@ -9,22 +9,22 @@ const NavbarChain = () => {
   ];
 
   return (
-    <div className="text-white flex justify-end items-start w-full">
-      <div className="flex text-gray-300 flex-row-reverse gap-4 text-xs">
+    <div className="text-text-primary flex justify-end items-start w-full">
+      <div className="flex text-text-secondary flex-row-reverse gap-4 text-xs">
         {links.map((link, index) => (
           <React.Fragment key={index}>
             <a
               href={link.path}
               className={`transition-colors duration-200 ${
                 index === links.length - 1
-                  ? "text-white opacity-100"
-                  : "text-[#8C8ABE] opacity-60 hover:text-white"
+                  ? "text-text-primary opacity-100"
+                  : "text-text-secondary/60 hover:text-text-primary"
               }`}
             >
               {link.title}
             </a>
             {index < links.length - 1 && (
-              <span className="text-gray-400">&lt;</span>
+              <span className="text-text-secondary">&lt;</span>
             )}
           </React.Fragment>
         ))}

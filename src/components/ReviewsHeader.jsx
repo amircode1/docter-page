@@ -20,12 +20,12 @@ function ReviewsHeader() {
         <div className="flex items-center gap-4">
           <div className="relative">
               {showServices && (
-                <div className="absolute left-0 right-0 mt-2 py-2 bg-[#352F5A] rounded-xl shadow-lg z-10">
+                <div className="absolute left-0 right-0 mt-2 py-2 bg-accent-blue-light rounded-xl shadow-lg z-10">
                   {services.map((service) => (
                     <button
                       key={service}
-                      className={`w-full px-4 py-2 text-right hover:bg-[#53509E] transition-colors ${
-                        selectedService === service ? "text-[#2196F3]" : "text-white"
+                      className={`w-full px-4 py-2 text-right hover:bg-background-hover transition-colors ${
+                        selectedService === service ? "text-accent-blue" : "text-text-primary"
                       }`}
                       onClick={() => {
                         setSelectedService(service)
@@ -39,11 +39,11 @@ function ReviewsHeader() {
               )}
 
             <button
-              className="flex items-center gap-2 px-4 py-2 bg-[#53509E] rounded-xl hover:bg-[#53509E] transition-colors text-white"
+              className="flex items-center gap-2 px-4 py-2 bg-accent-blue-light rounded-xl hover:bg-background-hover transition-colors text-primary"
               onClick={() => setShowServices(!showServices)}
             >
               <span>{selectedService}</span>
-              <span className="text-gray-400">(۵۳۶)</span>
+              <span className="text-primary">(۵۳۶)</span>
               <ChevronDown className={`w-4 h-4 transition-transform ${showServices ? "rotate-180" : ""}`} />
             </button>
 
@@ -52,13 +52,13 @@ function ReviewsHeader() {
 
         <div className="flex items-center gap-4">
           <img src={reviews} alt="reviews" />
-          <span className="text-white">مرتب سازی:</span>
+          <span className="text-text-primary">مرتب سازی:</span>
           <div className="flex gap-4">
             {sortOptions.map((option) => (
               <button
                 key={option}
                 className={`text-sm transition-colors ${
-                  activeSort === option ? "text-[#2196F3]" : "text-gray-400 hover:text-gray-300"
+                  activeSort === option ? "text-accent-blue" : "text-text-secondary hover:text-text-primary"
                 }`}
                 onClick={() => setActiveSort(option)}
               >

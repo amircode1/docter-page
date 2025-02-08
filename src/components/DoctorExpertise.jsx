@@ -41,37 +41,37 @@ function DoctorExpertise() {
 
   return (
     <div className="max-w-4xl mx-auto" dir="rtl">
-      <div className="bg-[#38356a] rounded-3xl p-6 text-white">
+      <div className="bg-card-bg rounded-3xl p-6 text-text-primary">
         <div className="flex items-center justify-between gap-2 mb-6">
-            <div className="flex items-center gap-2 px-10">
-                <Info className="w-5 h-5 text-gray-400" />
-                <p className="text-sm text-gray-300 mr-2">
-                    سوابق درمانی نشان می‌دهد که دکتر رضا فرجی بیشتر در حوزه‌های زیر فعالیت می‌کند.
-                </p>
-            </div>
-          <h2 className="text-sm text-gray-300 ml-10">تجربه پزشک</h2>
+          <div className="flex items-center gap-2 px-10">
+            <Info className="w-5 h-5 text-text-secondary" />
+            <p className="text-sm text-text-secondary mr-2">
+              سوابق درمانی نشان می‌دهد که دکتر رضا فرجی بیشتر در حوزه‌های زیر فعالیت می‌کند.
+            </p>
+          </div>
+          <h2 className="text-sm text-text-secondary ml-10">تجربه پزشک</h2>
         </div>
 
         <div className="space-y-4">
           {expertiseData.map((item) => (
-            <div key={item.id} className="border-none bg-[#38356a] rounded-2xl overflow-hidden">
+            <div key={item.id} className="border-none rounded-2xl overflow-hidden">
               <button
                 onClick={() => toggleItem(item.id)}
-                className="w-full px-6 py-4 text-right transition-colors hover:bg-[#1e1e3f]"
+                className="w-full px-6 py-4 text-right transition-colors hover:bg-background-hover"
               >
                 <div className="flex items-center justify-between w-full">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#2196F3] bg-opacity-20 flex items-center justify-center">
-                        {openItem === item.id ? (
-                        <Minus className="w-6 h-6 text-[#2196F3]" />
-                        ) : (
-                        <Plus className="w-6 h-6 text-[#2196F3]" />
-                        )}
+                    <div className="w-12 h-12 rounded-full bg-accent-blue-light/20 flex items-center justify-center hover:bg-accent-blue-light/30 transition-colors">
+                      {openItem === item.id ? (
+                        <Minus className="w-6 h-6 text-accent-blue-light hover:text-accent-blue-dark transition-colors" />
+                      ) : (
+                        <Plus className="w-6 h-6 text-accent-blue-light hover:text-accent-blue-dark transition-colors" />
+                      )}
                     </div>
                     <span className="font-semibold">{item.title}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[#2196F3]">{item.level}</span>
+                    <span className="text-accent-blue-light">{item.level}</span>
                     <SpeedIcon level={item.level} />
                   </div>
                 </div>
@@ -82,15 +82,15 @@ function DoctorExpertise() {
                 }`}
               >
                 <div className="space-y-4 pb-4">
-                  <p className="text-gray-300">{item.description}</p>
+                  <p className="text-text-secondary">{item.description}</p>
                   <div className="space-y-2">
                     <SkillLevelBar level={item.level} />
                   </div> 
-                  <div className="flex items-center gap-2 border-2 border-[#53509E] p-2 w-fit rounded-2xl">
-                        <button className="text-[#2196F3] hover:text-[#1E88E5] transition-colors">
-                            اطلاعات بیشتر در مورد جراحی قلب
-                        </button>
-                        <img src={arrow} alt="arrow" className="w-6 h-6" />
+                  <div className="flex items-center gap-2 border-2 border-border p-2 w-fit rounded-2xl">
+                    <button className="text-accent-blue-light hover:text-accent-blue-dark transition-colors">
+                      اطلاعات بیشتر در مورد جراحی قلب
+                    </button>
+                    <img src={arrow} alt="arrow" className="w-6 h-6" />
                   </div>
                 </div>
               </div>
@@ -98,7 +98,9 @@ function DoctorExpertise() {
           ))}
         </div>
 
-        <button className="text-[#2196F3] hover:text-[#1E88E5] mt-4 transition-colors w-full">مشاهده بیشتر</button>
+        <button className="text-accent-blue-light hover:text-accent-blue-dark mt-4 transition-colors w-full">
+          مشاهده بیشتر
+        </button>
       </div>
     </div>
   )

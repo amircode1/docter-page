@@ -22,15 +22,15 @@ const NavbarPage = () => {
   }, [activeTab]);
 
   return (
-    <div className="relative text-white py-3 flex items-center flex-row-reverse">
-      <nav ref={containerRef} className="relative grid grid-cols-5 gap-2 text-gray-400">
+    <div className="relative text-text-primary py-3 flex items-center flex-row-reverse">
+      <nav ref={containerRef} className="relative grid grid-cols-5 gap-2 text-text-secondary">
         {tabs.map((tab) => (
           <button
             key={tab}
             ref={(el) => (tabRefs.current[tab] = el)}
             onClick={() => setActiveTab(tab)}
-            className={`relative py-1 transition-all duration-300 hover:text-white ${
-              activeTab === tab ? "text-white font-bold" : ""
+            className={`relative py-1 transition-all duration-300 hover:text-text-primary ${
+              activeTab === tab ? "text-text-primary font-bold" : ""
             }`}
           >
             {tab}
@@ -38,13 +38,13 @@ const NavbarPage = () => {
         ))}
         {/* نوار آبی متحرک */}
         <div
-          className="absolute -bottom-[12px] h-3 bg-blue-600 rounded-t-xl transition-all duration-300 filter drop-shadow-[0px_0px_13px_#317AF1]"
+          className="absolute -bottom-[12px] h-3 bg-accent-blue rounded-t-xl transition-all duration-300 filter drop-shadow-[0px_0px_13px_var(--accent-blue-light)]"
           style={indicatorStyle}
         ></div>
       </nav>
 
       {/* خط زیرین */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gray-500"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-border"></div>
     </div>
   );
 };

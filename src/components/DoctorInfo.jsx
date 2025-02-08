@@ -9,16 +9,23 @@ import StatItem from "./StatItemDoctor";
 const DoctorInfo = () => {
   const [showMore, setShowMore] = useState(false);
 
+  // آبجکت رنگ‌های آیکون‌ها
+  const iconColors = {
+    star: "#FDD835",    // رنگ زرد برای ستاره
+    calendar: "#42A5F5", // رنگ آبی برای تقویم
+    clock: "#EF5350",   // رنگ قرمز برای تاریخچه
+    thumbs: "#66BB6A",  // رنگ سبز برای لایک
+  };
 
   return (
     <div className="flex flex-col md:flex-row gap-6 text-white rounded-2xl">
       {/* بخش اطلاعات */}
-      <div className="bg-[#373569] p-4 rounded-2xl w-full md:w-1/3 space-y-3">
+      <div className="bg-card-bg p-4 rounded-2xl w-full md:w-1/3 space-y-3">
         <StatItem
           title="امتیاز"
           value="4.6"
           icon={starsun}
-          color="#FDD835"
+          color={iconColors.star}
           subText="از ۵۳۶ دیدگاه"
         />
         
@@ -26,42 +33,42 @@ const DoctorInfo = () => {
           title="نوبت موفق"
           value="۵۶۶"
           icon={CalendarCheck}
-          color="#42A5F5"
+          color={iconColors.calendar}
         />
 
         <StatItem
           title="سال سابقه"
           value="12"
           icon={history}
-          color="#EF5350"
+          color={iconColors.clock}
         />
 
         <StatItem
           title="پیشنهاد کاربران"
           value="۹۹٪"
           icon={thumbsup}
-          color="#66BB6A"
+          color={iconColors.thumbs}
         />
       </div>
 
       {/* بخش توضیحات */}
-      <div className="bg-[#373569] p-4 rounded-2xl w-full md:w-2/3 relative">
+      <div className="bg-card-bg p-4 rounded-2xl w-full md:w-2/3 relative">
         <div className="relative">
-          <p className={`text-gray-300 transition-all duration-300 ${
+          <p className={`text-text-primary transition-all duration-300 ${
             showMore ? "max-h-full" : "max-h-20 overflow-hidden"
           }`}>
-           تشخیص و درمان بیماریهای: دارای بورد تخصصی بیماری های نوزادان و کودکان درمان اختلالات گوارشی و الرژیک نوزادان و کودکان اختلالات رشد و نمو نوزادان و کودکان اختلال رشد و بلوغ نوجواناندر مطب سونوگرافی شکم، تست حساسیت به کازیین شیر الرژیک نوزادان و کودکان اختلالات رشد و نمو نوزادان و کودکان اختلال رشد و بلوغ نوجواناندر مطب سونوگرافی شکم، تست حساسیت به کازیین شیر
+            تشخیص و درمان بیماریهای: دارای بورد تخصصی بیماری های نوزادان و کودکان درمان اختلالات گوارشی و الرژیک نوزادان و کودکان اختلالات رشد و نمو نوزادان و کودکان اختلال رشد و بلوغ نوجواناندر مطب سونوگرافی شکم، تست حساسیت به کازیین شیر الرژیک نوزادان و کودکان اختلالات رشد و نمو نوزادان و کودکان اختلال رشد و بلوغ نوجواناندر مطب سونوگرافی شکم، تست حساسیت به کازیین شیر
           </p>
           
-          {/* افکت محو شدن خارج از تگ p */}
+          {/* افکت محو شدن */}
           {!showMore && (
-            <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#373569] to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-card-bg to-transparent"></div>
           )}
         </div>
 
         <button
           onClick={() => setShowMore(!showMore)}
-          className="flex items-center gap-1 mt-2 text-blue-400 hover:text-blue-500 transition-all"
+          className="flex items-center gap-1 mt-2 text-accent-blue-light hover:text-accent-blue-dark transition-colors"
         >
           {showMore ? "نمایش کمتر" : "نمایش بیشتر"} 
           <img 
@@ -74,7 +81,6 @@ const DoctorInfo = () => {
         </button>
       </div>
     </div>
-
   );
 };
 

@@ -13,7 +13,6 @@ import InsuranceSearch from "../components/InsuranceSearch";
 import SpecialtiesSection from "../components/SpecialtiesSection";
 import '../styles/globals.css';
 
-
 const userData = {
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
     name: "کاربر عادی",
@@ -43,16 +42,16 @@ function Doctor() {
                     <aside className="lg:w-1/3">
                         <DoctorProfile />
                     </aside>
-                    <div className="lg:w-2/3 space-y-6 bg-[#29294f] p-6">
+                    <div className="lg:w-2/3 space-y-6 bg-background p-6">
                         <NavbarChain/>
                         <NavbarPage/>
-                        <h3 className="text-lg font-bold mb-2 flex flex-row-reverse text-white">درباره دکتر رضا فرجی</h3>
+                        <h3 className="text-lg font-bold mb-2 flex flex-row-reverse text-text-primary">درباره دکتر رضا فرجی</h3>
                         <div className="">
                             <DoctorInfo/>
-                            <h3 className="text-lg font-bold my-4 mt-8 flex flex-row-reverse text-white">ادرس مطب دکتر رضا فرجی</h3>
+                            <h3 className="text-lg font-bold my-4 mt-8 flex flex-row-reverse text-text-primary">ادرس مطب دکتر رضا فرجی</h3>
                             <LocationCard/>
                             <LocationCard/>
-                            <h3 className="text-lg font-bold my-4 mt-8 flex flex-row-reverse text-white">زمینه های تخصصی دکتر رضا فرجی</h3>
+                            <h3 className="text-lg font-bold my-4 mt-8 flex flex-row-reverse text-text-primary">زمینه های تخصصی دکتر رضا فرجی</h3>
                             <DoctorExpertise/>
                             <DoctorReviews/>
                             <ReviewsHeader/>
@@ -69,8 +68,8 @@ function Doctor() {
                                 <div className="flex justify-center mt-6">
                                     <button
                                         onClick={handleLoadMore}
-                                        className="px-6 py-2 border border-[#2196F3] text-[#2196F3] rounded-full
-                                                    hover:bg-[#1976D2] hover:text-white transition-colors duration-300
+                                        className="px-6 py-2 border border-accent-blue text-accent-blue rounded-full
+                                                    hover:bg-accent-blue-dark hover:text-text-primary transition-colors duration-300
                                                     flex items-center gap-2"
                                     >
                                         مشاهده دیدگاه بیشتر
@@ -91,9 +90,9 @@ function Doctor() {
                                 </div>
                             )}
                         </div>
-                        <h3 className="text-lg font-bold my-4 mt-8 flex flex-row-reverse text-white">بیمه های طرف قرارداد </h3>
+                        <h3 className="text-lg font-bold my-4 mt-8 flex flex-row-reverse text-text-primary">بیمه های طرف قرارداد </h3>
                         <InsuranceSearch/>
-                        <h3 className="text-lg font-bold my-4 mt-8 flex flex-row-reverse text-white">برچسب های پزشک</h3>
+                        <h3 className="text-lg font-bold my-4 mt-8 flex flex-row-reverse text-text-primary">برچسب های پزشک</h3>
                         <SpecialtiesSection/>
                     </div>
                 </div>

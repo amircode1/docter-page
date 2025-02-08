@@ -9,23 +9,19 @@ function SkillLevelBar({ level = "خیلی زیاد" }) {
   return (
     <div className="w-full space-y-2 rounded-full">
       {/* نوار اصلی با فاصله بین بخش‌ها */}
-      <div className="h-4 flex gap-1 bg-[#38356a]">
+      <div className="h-4 flex gap-1">
         {levels.map((levelData) => (
           <div
             key={levelData.name}
             className="h-full relative transition-all duration-300"
             style={{
               width: `${levelData.percentage}%`,
-              backgroundColor: levelData.name === level ? "#2196F3" : "#454384",
+              backgroundColor: levelData.name === level ? "var(--accent-blue)" : "var(--accent-purple)",
               borderRadius: 
                 levelData.name === "کم" ? "0px 8px 8px 0px" :
                 levelData.name === "خیلی زیاد" ? "8px 0px 0px 8px" : "0"
             }}
           >
-            {/* خط جداکننده سفید */}
-            {levelData.name !== "خیلی زیاد" && (
-              <div className="absolute right-[-2px] top-0 w-[2px] h-full"></div>
-            )}
           </div>
         ))}
       </div>
@@ -36,7 +32,7 @@ function SkillLevelBar({ level = "خیلی زیاد" }) {
           <div 
             key={l.name} 
             className={`text-center ${
-              l.name === level ? "text-[#2196F3] font-bold" : "text-gray-400"
+              l.name === level ? "text-accent-blue font-bold" : "text-text-secondary"
             }`}
             style={{ width: `${l.percentage}%` }}
           >
