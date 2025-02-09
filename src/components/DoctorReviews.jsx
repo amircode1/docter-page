@@ -57,7 +57,7 @@ function DoctorReviews() {
               دیدگاه خود را در مورد این پزشک ثبت کنید
             </p>
             <button 
-              className="w-full md:w-auto text-accent-blue-light px-6 py-2 bg-background border border-accent-blue-light hover:bg-accent-blue-light hover:text-primary rounded-xl transition-colors"
+              className="w-full md:w-auto text-accent-blue-light px-6 py-2 border border-accent-blue-light hover:bg-accent-blue hover:text-text-primary rounded-xl transition-colors"
             >
               ثبت دیدگاه
             </button>
@@ -70,7 +70,7 @@ function DoctorReviews() {
             {filters.map((filter) => (
               <button
                 key={filter.id}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl border border-accent-blue-light text-text-primary hover:bg-accent-blue-light hover:text-primary transition-colors"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl border border-accent-blue-light text-text-primary hover:bg-accent-blue-light hover:text-text-primary transition-colors"
               >
                 <span className="text-xl">{filter.icon}</span>
                 <span>{filter.title}</span>

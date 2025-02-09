@@ -34,13 +34,13 @@ function DoctorProfile() {
         
         {/* Actions */}
         <div className="flex justify-center gap-4 my-2 mt-6">
-          <button className="bg-secondary p-3 rounded-2xl text-text-secondary hover:bg-background-hover transition-colors">
+          <button className="bg-card-icon p-3 rounded-2xl text-text-secondary hover:bg-background-hover transition-colors">
             <img src={ShareIcon} alt="Share" className="w-7 h-7" />
           </button>
-          <button className="bg-secondary p-3 rounded-2xl text-text-secondary hover:bg-background-hover transition-colors">
+          <button className="bg-card-icon p-3 rounded-2xl text-text-secondary hover:bg-background-hover transition-colors">
             <img src={BookmarkIcon} alt="Bookmark" className="w-7 h-7" />
           </button>
-          <button className="bg-secondary p-3 rounded-2xl text-text-secondary hover:bg-background-hover transition-colors">
+          <button className="bg-card-icon p-3 rounded-2xl text-text-secondary hover:bg-background-hover transition-colors">
             <img src={InstagramIcon} alt="Chat" className="w-7 h-7" />
           </button>
         </div>

@@ -20,7 +20,7 @@ const DoctorInfo = () => {
   return (
     <div className="flex flex-col md:flex-row gap-6 text-white rounded-2xl">
       {/* بخش اطلاعات */}
-      <div className="bg-card-bg p-4 rounded-2xl w-full md:w-1/3 space-y-3">
+      <div className="bg-card-bg p-7 rounded-2xl w-full md:w-1/3 space-y-5">
         <StatItem
           title="امتیاز"
           value="4.6"
@@ -52,17 +52,17 @@ const DoctorInfo = () => {
       </div>
 
       {/* بخش توضیحات */}
-      <div className="bg-card-bg p-4 rounded-2xl w-full md:w-2/3 relative">
-        <div className="relative">
+      <div className="bg-card-bg p-10 rounded-2xl w-full md:w-2/3 relative">
+        <div className="relative" dir="rtl">
+          <p className="pb-4 text-text-primary">:تشخیص و درمان بیماریهای</p>
           <p className={`text-text-primary transition-all duration-300 ${
-            showMore ? "max-h-full" : "max-h-20 overflow-hidden"
+            showMore ? "max-h-full" : "max-h-64 overflow-hidden"
           }`}>
-            تشخیص و درمان بیماریهای: دارای بورد تخصصی بیماری های نوزادان و کودکان درمان اختلالات گوارشی و الرژیک نوزادان و کودکان اختلالات رشد و نمو نوزادان و کودکان اختلال رشد و بلوغ نوجواناندر مطب سونوگرافی شکم، تست حساسیت به کازیین شیر الرژیک نوزادان و کودکان اختلالات رشد و نمو نوزادان و کودکان اختلال رشد و بلوغ نوجواناندر مطب سونوگرافی شکم، تست حساسیت به کازیین شیر
-          </p>
+ دارای بورد تخصصی بیماری های نوزادان و کودکان درمان اختلالات گوارشی و الرژیک نوزادان و کودکان اختلالات رشد و نمو نوزادان و کودکان اختلال رشد و بلوغ نوجواناندر مطب سونوگرافی شکم، تست حساسیت به کازیین شیر الرژیک نوزادان و کودکان اختلالات رشد و نمو نوزادان و کودکان اختلال رشد و بلوغ نوجواناندر مطب سونوگرافی شکم، تست حساسیت به کازیین شیر</p>
           
           {/* افکت محو شدن */}
           {!showMore && (
-            <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-card-bg to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-card-bg to-transparent"></div>
           )}
         </div>
 

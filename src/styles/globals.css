@@ -15,7 +15,7 @@
     --text-secondary: #747d8a;
     --text-gray: #9ca3af;
     --background: #F4F8FE;
-    --background-hover: #b5d7ff;
+    --background-hover: #77b2f5;
     --border-color: #e2e8f0;
     --star-color: #FFD700;
     --state-success: #66BB6A;
@@ -43,7 +43,7 @@
     --text-secondary: #8C8ABE;
     --text-gray: #9ca3af;
     --background: #29294f;
-    --background-hover: #1e1e3f;
+    --background-hover: #77b2f5;
     --border-color: #53509E;
     --star-color: #FFD700;
     --state-success: #66BB6A;
@@ -56,6 +56,6 @@
     --gradient-end: #A050E5;
     --card-bg: #38356a;
     --card-text: #8C8ABE;
-    --card-icon-bg: #97BCF8;
+    --card-icon-bg: #2A284F;
   }
 }

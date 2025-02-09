@@ -15,12 +15,12 @@ function ReviewsHeader() {
 
 
   return (
-    <div className=" p-4 mt-8 rounded-t-3xl" dir="rtl">
+    <div className=" p-4 px-0 mt-8 rounded-t-3xl" dir="rtl">
       <div className="flex flex-wrap items-center gap-4 mb-4">
         <div className="flex items-center gap-4">
           <div className="relative">
               {showServices && (
-                <div className="absolute left-0 right-0 mt-2 py-2 bg-accent-blue-light rounded-xl shadow-lg z-10">
+                <div className="absolute left-0 right-0 mt-2 py-2 bg-card-bg rounded-xl shadow-lg z-10">
                   {services.map((service) => (
                     <button
                       key={service}
@@ -39,11 +39,11 @@ function ReviewsHeader() {
               )}
 
             <button
-              className="flex items-center gap-2 px-4 py-2 bg-accent-blue-light rounded-xl hover:bg-background-hover transition-colors text-primary"
+              className="flex items-center gap-2 px-4 py-2 bg-card-bg rounded-xl hover:bg-background-hover transition-colors text-text-primary"
               onClick={() => setShowServices(!showServices)}
             >
               <span>{selectedService}</span>
-              <span className="text-primary">(۵۳۶)</span>
+              <span className="text-text-primary">(۵۳۶)</span>
               <ChevronDown className={`w-4 h-4 transition-transform ${showServices ? "rotate-180" : ""}`} />
             </button>
 

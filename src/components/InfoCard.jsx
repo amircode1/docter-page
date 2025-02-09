@@ -4,7 +4,7 @@ const InfoCard = ({ title, value, icon, iconBg = 'rounded-lg' }) => (
     <div className="flex flex-row items-center gap-2">
       <span className="text-text-primary">{value}</span>
       <span className="relative flex items-center justify-center w-10 h-10">
-        <div className={`absolute inset-0 bg-card-icon bg-opacity-30 ${iconBg}`} />
+        <div className={`absolute inset-0 bg-card-icon ${iconBg}`} />
         <img 
           src={icon} 
           alt={title} 
