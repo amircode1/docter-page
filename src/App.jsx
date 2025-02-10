@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import Doctor from "./Pages/Doctor";
 import { Moon, Sun } from "lucide-react";
 import './styles/globals.css'
-import { Link, Route, Routes, BrowserRouter } from "react-router-dom";
-import Doctor1 from "./Pages/Doctor1";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -22,8 +21,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Link className="flex items-center justify-center text-text-primary bg-background" to={'/doctor1'}>Doctor Page 2</Link>
-      <Link className="flex items-center justify-center text-text-primary bg-background" to={'/'}>Doctor Page 1</Link>
       <div className={`min-h-screen ${theme} bg-secondary`}>
         <button
           onClick={toggleTheme}
@@ -38,7 +35,6 @@ function App() {
         </button>
         
         <Routes>
-          <Route path="/doctor1" element={<Doctor1 />} />
           <Route path="/" element={<Doctor />} />
         </Routes>
       </div>
